@@ -9,22 +9,36 @@ export function useGsapAnimations() {
     const ctx = gsap.context(() => {
       const posters = gsap.utils.toArray<HTMLElement>("[data-project-poster]");
 
-      gsap.from("[data-hero-title] span", {
-        yPercent: 120,
-        rotate: 4,
+      // Hero Title Animation - Massive reveal
+      gsap.from("[data-hero-title-line]", {
+        yPercent: 100,
         opacity: 0,
-        duration: 1,
+        duration: 1.2,
         ease: "power4.out",
-        stagger: 0.12,
+        stagger: 0.15,
       });
 
+      // Hero Meta Elements - Staggered fade in
       gsap.from("[data-hero-meta]", {
-        y: 24,
+        y: 40,
         opacity: 0,
-        duration: 0.8,
-        delay: 0.35,
+        duration: 1,
+        delay: 0.5,
         ease: "power3.out",
-        stagger: 0.08,
+        stagger: 0.1,
+      });
+
+      // Hero title text scale effect on scroll
+      gsap.to("[data-hero-title] .hero-title-text", {
+        scale: 0.95,
+        opacity: 0.8,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-section",
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+        },
       });
 
       gsap.to("[data-parallax='hero-shape-one']", {
