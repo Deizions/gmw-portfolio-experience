@@ -9,29 +9,41 @@ export function useGsapAnimations() {
     const ctx = gsap.context(() => {
       const posters = gsap.utils.toArray<HTMLElement>("[data-project-poster]");
 
-      // Hero Title Animation - Massive reveal
+      // Hero Name Animation - Massive reveal with stagger
       gsap.from("[data-hero-title-line]", {
-        yPercent: 100,
+        yPercent: 120,
         opacity: 0,
-        duration: 1.2,
+        duration: 1.4,
         ease: "power4.out",
-        stagger: 0.15,
+        stagger: 0.2,
       });
 
-      // Hero Meta Elements - Staggered fade in
+      // Hero Meta Elements - Staggered fade in with slight delay
       gsap.from("[data-hero-meta]", {
-        y: 40,
+        y: 50,
         opacity: 0,
-        duration: 1,
-        delay: 0.5,
+        duration: 1.1,
+        delay: 0.6,
         ease: "power3.out",
-        stagger: 0.1,
+        stagger: 0.12,
       });
 
-      // Hero title text scale effect on scroll
-      gsap.to("[data-hero-title] .hero-title-text", {
-        scale: 0.95,
-        opacity: 0.8,
+      // Hero typography parallax on scroll
+      gsap.to("[data-hero-title] .hero-first-name, [data-hero-title] .hero-surname", {
+        y: -60,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-section",
+          start: "top top",
+          end: "bottom top",
+          scrub: 1.5,
+        },
+      });
+
+      // Portrait container subtle scale and lift on scroll
+      gsap.to(".hero-portrait-container", {
+        y: -40,
+        scale: 0.98,
         ease: "none",
         scrollTrigger: {
           trigger: ".hero-section",
