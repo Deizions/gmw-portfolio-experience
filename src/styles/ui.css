@@ -1,0 +1,414 @@
+/* =============================================
+   IMAGE PLACEHOLDER COMPONENT
+   ============================================= */
+
+.image-placeholder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border);
+  overflow: hidden;
+  min-height: 200px;
+}
+
+.image-placeholder--light {
+  background: var(--bg);
+}
+
+.image-placeholder--dark {
+  background: var(--text);
+}
+
+.image-placeholder--accent {
+  background: var(--accent);
+}
+
+.image-placeholder-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: var(--space-3);
+  text-align: center;
+}
+
+.image-placeholder-icon {
+  width: 64px;
+  height: 64px;
+  border: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder--light .image-placeholder-icon {
+  background: var(--light);
+}
+
+.image-placeholder--dark .image-placeholder-icon {
+  background: var(--accent);
+}
+
+.image-placeholder--accent .image-placeholder-icon {
+  background: var(--light);
+}
+
+.image-placeholder--dark .image-placeholder-icon svg {
+  color: var(--text);
+}
+
+.image-placeholder-label {
+  display: inline-block;
+  padding: 6px 10px;
+  border: var(--border);
+  font-size: 11px;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.image-placeholder--light .image-placeholder-label {
+  background: var(--accent);
+  color: var(--text);
+}
+
+.image-placeholder--dark .image-placeholder-label {
+  background: var(--light);
+  color: var(--text);
+}
+
+.image-placeholder--accent .image-placeholder-label {
+  background: var(--text);
+  color: var(--light);
+}
+
+.image-placeholder-description {
+  max-width: 280px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.image-placeholder--light .image-placeholder-description {
+  color: var(--muted);
+}
+
+.image-placeholder--dark .image-placeholder-description {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.image-placeholder--accent .image-placeholder-description {
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.image-placeholder-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(10, 10, 10, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(10, 10, 10, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.image-placeholder--dark .image-placeholder-grid {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.image-placeholder-corners {
+  position: absolute;
+  inset: 12px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.image-placeholder-corners span {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid;
+}
+
+.image-placeholder--light .image-placeholder-corners span,
+.image-placeholder--accent .image-placeholder-corners span {
+  border-color: var(--text);
+}
+
+.image-placeholder--dark .image-placeholder-corners span {
+  border-color: var(--accent);
+}
+
+.image-placeholder-corners span:nth-child(1) {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.image-placeholder-corners span:nth-child(2) {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+.image-placeholder-corners span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+
+.image-placeholder-corners span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* =============================================
+   BACKGROUND GRAPHIC ELEMENTS
+   ============================================= */
+
+.bg-graphic {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-graphic-grid {
+  background:
+    linear-gradient(90deg, rgba(10, 10, 10, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(10, 10, 10, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-graphic-dots {
+  background-image: radial-gradient(circle, var(--text) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  opacity: 0.15;
+}
+
+.bg-graphic-lines {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 2px,
+    rgba(10, 10, 10, 0.03) 2px,
+    rgba(10, 10, 10, 0.03) 4px
+  );
+}
+
+.bg-graphic-accent-glow {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(183, 255, 0, 0.15) 0%,
+    transparent 70%
+  );
+}
+
+/* =============================================
+   EDITORIAL ELEMENTS
+   ============================================= */
+
+.editorial-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: var(--border);
+  background: var(--accent);
+  font-size: 11px;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.editorial-label--dark {
+  background: var(--text);
+  color: var(--light);
+}
+
+.editorial-divider {
+  width: 100%;
+  height: 3px;
+  background: var(--text);
+}
+
+.editorial-divider--accent {
+  background: var(--accent);
+}
+
+.editorial-number {
+  font-size: clamp(120px, 18vw, 280px);
+  line-height: 0.75;
+  font-weight: 950;
+  letter-spacing: -0.1em;
+  color: rgba(10, 10, 10, 0.06);
+}
+
+.editorial-number--light {
+  color: rgba(255, 255, 255, 0.08);
+}
+
+/* =============================================
+   CASE STUDY CARDS
+   ============================================= */
+
+.case-study-card {
+  position: relative;
+  border: var(--border);
+  background: var(--light);
+  box-shadow: var(--shadow-brutal);
+  overflow: hidden;
+}
+
+.case-study-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  border-bottom: var(--border);
+}
+
+.case-study-header span {
+  padding: 12px 16px;
+  border-right: var(--border);
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.case-study-header span:first-child {
+  background: var(--accent);
+}
+
+.case-study-header span:last-child {
+  border-right: none;
+}
+
+.case-study-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.case-study-visual {
+  border-right: var(--border);
+}
+
+.case-study-content {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.case-study-content h3 {
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.case-study-content p {
+  font-size: var(--body);
+  line-height: 1.4;
+  max-width: 480px;
+}
+
+.case-study-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.case-study-tags span {
+  padding: 8px 12px;
+  border: var(--border);
+  background: var(--bg);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* =============================================
+   POSTER GRID SYSTEM
+   ============================================= */
+
+.poster-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.poster-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.poster-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.poster-grid--asymmetric {
+  grid-template-columns: 1.4fr 0.6fr;
+}
+
+.poster-item {
+  position: relative;
+  border: var(--border);
+  background: var(--light);
+  box-shadow: var(--shadow-brutal);
+  overflow: hidden;
+}
+
+.poster-item-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 4;
+  padding: 6px 10px;
+  border: var(--border);
+  background: var(--accent);
+  font-size: 11px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.poster-item-number {
+  position: absolute;
+  bottom: -8px;
+  right: 12px;
+  z-index: 3;
+  font-size: clamp(80px, 12vw, 140px);
+  line-height: 0.75;
+  font-weight: 950;
+  letter-spacing: -0.08em;
+  color: rgba(10, 10, 10, 0.08);
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+@media (max-width: 900px) {
+  .case-study-body {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-visual {
+    border-right: none;
+    border-bottom: var(--border);
+  }
+
+  .poster-grid--two,
+  .poster-grid--three,
+  .poster-grid--asymmetric {
+    grid-template-columns: 1fr;
+  }
+}
