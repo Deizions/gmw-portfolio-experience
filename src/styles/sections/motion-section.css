@@ -1,0 +1,271 @@
+.motion-section {
+  justify-content: flex-start;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(183, 255, 0, 0.12), transparent 24%),
+    var(--text);
+  color: var(--light);
+}
+
+.motion-top {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-5);
+  align-items: end;
+}
+
+.motion-lead {
+  border: var(--border);
+  background: var(--accent);
+  color: var(--text);
+  padding: var(--space-3);
+  font-size: var(--body);
+  line-height: 1.35;
+  font-weight: 900;
+  box-shadow: 8px 8px 0 var(--light);
+}
+
+.marquee-window {
+  width: calc(100% + 64px);
+  margin-inline: -32px;
+  border-block: var(--border);
+  overflow: hidden;
+  background: var(--accent);
+  color: var(--text);
+}
+
+.marquee-track {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 16px 0;
+  will-change: transform;
+}
+
+.marquee-track span {
+  font-size: clamp(40px, 8vw, 112px);
+  line-height: 0.8;
+  font-weight: 950;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+}
+
+.editing-board {
+  border: var(--border);
+  background: var(--light);
+  color: var(--text);
+  box-shadow: 12px 12px 0 var(--accent);
+  overflow: hidden;
+}
+
+.editing-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 120px;
+  border-bottom: var(--border);
+  background: var(--accent);
+}
+
+.editing-header span {
+  padding: 14px 16px;
+  border-right: var(--border);
+  font-size: var(--small);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.editing-header span:last-child {
+  border-right: none;
+  text-align: right;
+}
+
+.preview-stage {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  min-height: 520px;
+}
+
+.preview-window {
+  position: relative;
+  overflow: hidden;
+  border-right: var(--border);
+
+  background:
+    linear-gradient(90deg, rgba(10, 10, 10, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(10, 10, 10, 0.08) 1px, transparent 1px),
+    var(--bg);
+
+  background-size: 44px 44px;
+
+  display: grid;
+  place-items: center;
+}
+
+.preview-grid {
+  position: absolute;
+  inset: 36px;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.preview-grid span {
+  border: var(--border);
+  background: rgba(255, 255, 255, 0.46);
+}
+
+.preview-title {
+  position: relative;
+  z-index: 4;
+
+  border: var(--border);
+  background: var(--light);
+  padding: var(--space-3);
+
+  box-shadow: 12px 12px 0 var(--text);
+  transform: rotate(-3deg);
+}
+
+.preview-title span,
+.preview-title strong {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 950;
+  line-height: 0.85;
+}
+
+.preview-title span {
+  font-size: clamp(34px, 5vw, 76px);
+}
+
+.preview-title strong {
+  font-size: clamp(62px, 10vw, 170px);
+  letter-spacing: -0.09em;
+}
+
+.preview-shape {
+  position: absolute;
+  z-index: 3;
+  border: var(--border);
+  background: var(--accent);
+}
+
+.preview-shape-a {
+  width: 140px;
+  height: 140px;
+  left: 12%;
+  top: 18%;
+  transform: rotate(12deg);
+}
+
+.preview-shape-b {
+  width: 240px;
+  height: 64px;
+  right: 8%;
+  bottom: 18%;
+  background: var(--text);
+  transform: rotate(-8deg);
+}
+
+.frame-notes {
+  display: grid;
+}
+
+.frame-notes article {
+  padding: var(--space-3);
+  border-bottom: var(--border);
+  background: var(--light);
+  display: grid;
+  gap: var(--space-1);
+}
+
+.frame-notes article:last-child {
+  border-bottom: none;
+}
+
+.frame-notes span {
+  width: fit-content;
+  border: var(--border);
+  background: var(--accent);
+  padding: 6px 8px;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.frame-notes h3 {
+  font-size: clamp(28px, 3vw, 48px);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.frame-notes p {
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.timeline-editor {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  padding: var(--space-3);
+  border-top: var(--border);
+  background: var(--text);
+  color: var(--light);
+}
+
+.time-ruler {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.timeline-track {
+  min-height: 42px;
+  border: 2px solid var(--light);
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 6px;
+  padding: 6px;
+}
+
+.clip {
+  display: flex;
+  align-items: center;
+  padding-inline: 8px;
+
+  border: 2px solid var(--light);
+  background: var(--accent);
+  color: var(--text);
+
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.clip-short {
+  grid-column: span 2;
+}
+
+.clip-mid {
+  grid-column: span 4;
+}
+
+.clip-long {
+  grid-column: span 6;
+}
+
+.playhead {
+  position: absolute;
+  top: var(--space-3);
+  bottom: var(--space-3);
+  left: 0;
+  width: 4px;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--text), 0 0 0 6px var(--accent);
+}

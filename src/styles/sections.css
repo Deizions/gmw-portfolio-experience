@@ -1,0 +1,95 @@
+@import "./sections/hero.css";
+@import "./sections/manifesto.css";
+@import "./sections/story.css";
+@import "./sections/projects.css";
+@import "./sections/motion-section.css";
+@import "./sections/thinking.css";
+@import "./sections/cta.css";
+@import "./sections/responsive.css";
+
+.section {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 32px 80px;
+  border-bottom: var(--border);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.dark-section {
+  background: var(--dark);
+  color: var(--light);
+  border-color: var(--light);
+}
+
+.dark-section * {
+  border-color: var(--light);
+}
+
+.eyebrow {
+  font-size: var(--small);
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.section-title {
+  font-size: var(--h2);
+  line-height: 0.9;
+  font-weight: 950;
+  letter-spacing: -0.07em;
+  max-width: 1180px;
+  text-transform: uppercase;
+}
+
+.section-copy {
+  font-size: var(--body);
+  line-height: 1.35;
+  max-width: 760px;
+}
+
+.section-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.tag-row,
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-row span {
+  border: var(--border);
+  background: var(--light);
+  padding: 10px 14px;
+  font-size: var(--small);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: var(--border);
+  padding: 18px 24px;
+  font-weight: 950;
+  text-transform: uppercase;
+  background: var(--text);
+  color: var(--light);
+}
+
+.secondary-btn {
+  background: var(--light);
+  color: var(--text);
+}

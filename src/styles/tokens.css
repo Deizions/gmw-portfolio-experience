@@ -1,0 +1,29 @@
+:root {
+  --bg: #f5f5f5;
+  --text: #0a0a0a;
+  --muted: #6d6d6d;
+  --dark: #0a0a0a;
+  --light: #ffffff;
+  --accent: #b7ff00;
+
+  --border-color: #0a0a0a;
+  --border: 3px solid var(--border-color);
+
+  --container: 1440px;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 40px;
+  --space-5: 72px;
+  --space-6: 112px;
+
+  --hero: clamp(56px, 11vw, 172px);
+  --h2: clamp(40px, 7vw, 112px);
+  --h3: clamp(28px, 4vw, 64px);
+  --body: clamp(16px, 1.4vw, 22px);
+  --small: 14px;
+
+  --radius-none: 0;
+  --shadow-brutal: 9px 9px 0 var(--text);
+}

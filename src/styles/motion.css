@@ -1,0 +1,63 @@
+[data-reveal],
+[data-brutal-card],
+[data-hero-meta] {
+  will-change: transform, opacity;
+}
+
+.hero-title,
+.section-title,
+.work-card,
+.project-poster,
+.primary-btn,
+.secondary-btn,
+.top-nav a,
+.footer-links a,
+.header-cta,
+.project-link,
+.cta-link-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.work-card:hover,
+.project-poster:hover,
+.cta-link-card:hover {
+  transform: translate(-8px, -8px);
+  box-shadow: 17px 17px 0 var(--text);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.top-nav a:hover,
+.footer-links a:hover,
+.header-cta:hover,
+.project-link:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 6px 6px 0 var(--text);
+}
+
+.brand-mark:hover span {
+  background: var(--accent);
+  color: var(--text);
+}
+
+.dark-section .primary-btn:hover,
+.dark-section .secondary-btn:hover,
+.dark-section .top-nav a:hover,
+.dark-section .footer-links a:hover {
+  box-shadow: 6px 6px 0 var(--light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,238 @@
+.thinking-section {
+  justify-content: flex-start;
+
+  background:
+    linear-gradient(90deg, rgba(10, 10, 10, 0.07) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(10, 10, 10, 0.07) 1px, transparent 1px),
+    var(--bg);
+
+  background-size: 56px 56px;
+}
+
+.thinking-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-5);
+  align-items: end;
+}
+
+.thinking-title-block {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.thinking-lead-card {
+  border: var(--border);
+  background: var(--light);
+  padding: var(--space-3);
+  box-shadow: 8px 8px 0 var(--text);
+
+  display: grid;
+  gap: var(--space-2);
+}
+
+.thinking-lead-card span {
+  width: fit-content;
+  border: var(--border);
+  background: var(--accent);
+  padding: 8px 10px;
+
+  font-size: var(--small);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.thinking-lead-card p {
+  font-size: clamp(20px, 2vw, 34px);
+  line-height: 1.05;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.thinking-board {
+  border: var(--border);
+  background: var(--light);
+  box-shadow: var(--shadow-brutal);
+  overflow: hidden;
+}
+
+.thinking-board-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 120px;
+  border-bottom: var(--border);
+  background: var(--accent);
+}
+
+.thinking-board-header span {
+  padding: 14px 16px;
+  border-right: var(--border);
+
+  font-size: var(--small);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.thinking-board-header span:last-child {
+  border-right: none;
+  text-align: right;
+}
+
+.thinking-map {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 560px;
+}
+
+.thinking-rules {
+  border-right: var(--border);
+  background: var(--text);
+  color: var(--light);
+  padding: var(--space-3);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.thinking-rules-title {
+  width: fit-content;
+  border: var(--border);
+  background: var(--accent);
+  color: var(--text);
+  padding: 8px 10px;
+
+  font-size: var(--small);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.thinking-rules ul {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.thinking-rules li {
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--light);
+
+  font-size: clamp(18px, 2vw, 28px);
+  line-height: 0.95;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.thinking-rules li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.process-lane {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.process-node {
+  position: relative;
+  min-height: 560px;
+  padding: var(--space-3);
+  border-right: var(--border);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.process-node:last-child {
+  border-right: none;
+}
+
+.process-node-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.process-number {
+  font-size: clamp(54px, 5vw, 90px);
+  line-height: 0.8;
+  font-weight: 950;
+  letter-spacing: -0.08em;
+}
+
+.process-label {
+  border: var(--border);
+  background: var(--accent);
+  padding: 7px 9px;
+
+  font-size: 11px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.process-node h3 {
+  font-size: clamp(26px, 3vw, 52px);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.process-node p {
+  font-size: clamp(14px, 1.1vw, 18px);
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.process-connector {
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  z-index: 4;
+
+  width: 48px;
+  height: 48px;
+
+  border: var(--border);
+  background: var(--accent);
+
+  display: grid;
+  place-items: center;
+
+  translate: 0 -50%;
+
+  font-size: 28px;
+  font-weight: 950;
+}
+
+.thinking-output {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  border-top: var(--border);
+}
+
+.thinking-output span,
+.thinking-output strong {
+  padding: var(--space-3);
+  text-transform: uppercase;
+}
+
+.thinking-output span {
+  border-right: var(--border);
+  background: var(--text);
+  color: var(--light);
+
+  font-size: var(--small);
+  font-weight: 950;
+}
+
+.thinking-output strong {
+  font-size: clamp(26px, 4vw, 64px);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  font-weight: 950;
+}
